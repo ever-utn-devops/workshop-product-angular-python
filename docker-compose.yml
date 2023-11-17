@@ -1,0 +1,73 @@
+version: "3.7"
+
+services:
+
+  auth:
+    hostname: security
+    build:
+      context: .
+      dockerfile: ./user-api/Dockerfile
+    ports:
+      - "3008:3008"
+    expose:
+      - 3008
+    environment:
+      - "USER_PORT:${USER_PORT}"
+    restart: always
+    networks:
+      - backend
+    
+  product:
+    hostname: product
+    build:
+      context: .
+      dockerfile: ./product-api/Dockerfile
+    ports:
+      - "3007:3007"
+    expose:
+      - 3007
+    environment:
+      - "PRODUCT_PORT:${PRODUCT_PORT}"
+    restart: always
+    networks:
+      - backend
+  
+  sales:
+    hostname: sale
+    build:
+      context: .
+      dockerfile: ./sale-api/Dockerfile
+    ports:
+      - "3009:3009"
+    expose:
+      - 3009
+    environment:
+      - "PRODUCT_API_INTERNAL_URL:${PRODUCT_API_INTERNAL_URL}"
+      - "SALE_PORT:${SALE_PORT}"
+    restart: always
+    networks:
+      - backend 
+
+  productweb:
+    hostname: productweb
+    build:
+      context: .
+      dockerfile: ./product-web/Dockerfile
+    ports:
+      - "4200:80"
+    expose:
+      - 4200
+    #environment:
+    #  - "PRODUCT_API_INTERNAL_URL:${PRODUCT_API_INTERNAL_URL}"
+    #  - "SALE_PORT:${SALE_PORT}"
+    restart: always
+    networks:
+      - frontend
+      - backend
+  
+networks:
+  frontend:
+    driver: bridge
+  
+  backend:
+    driver: bridge

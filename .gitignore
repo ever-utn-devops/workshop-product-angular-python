@@ -1,0 +1,6 @@
+.env
+node_modules
+./product-api/node_modules
+./sale-api/node_modules
+./user-api/node_modules
+./product-web/node_modules
