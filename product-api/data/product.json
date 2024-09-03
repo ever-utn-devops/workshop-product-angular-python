@@ -1,0 +1,42 @@
+[
+    {
+        "productId": 2,
+        "productName": "Garden Cart",
+        "productCode": "GDN-0023",
+        "releaseDate": "March 18, 2019",
+        "price": 32.99,
+        "description":"15 gallon capacity rolling garden cart",
+        "starRating": 5,
+        "imageUrl": "assets/images/garden.jpg"
+    },
+    {
+        "productId": 5,
+        "productName": "Hammer",
+        "productCode": "TBX-0048",
+        "releaseDate": "May 21, 2019",
+        "price": 8.9,
+        "description": "Curved claw steel hammer",
+        "starRating": 4.6,
+        "imageUrl": "assets/images/hammer.jpg"
+    },
+    {
+        "productId":7,
+        "productName": "Drill",
+        "productCode": "PRX-095",
+        "releaseDate": "Sept 2nd, 2019",
+        "price": 32.9,
+        "description":"",
+        "starRating": 3.2,
+        "imageUrl":"assets/images/drill.jpg"
+    },
+    {
+        "productId":8,
+        "productName": "Screwdriver",
+        "productCode": "SCWD-077",
+        "releaseDate": "Oct 3rd, 2021",
+        "price": 32.9,
+        "description":"",
+        "starRating": 4.2,
+        "imageUrl":""
+    }
+]
