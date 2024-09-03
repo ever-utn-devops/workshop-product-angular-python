@@ -1,6 +1,6 @@
 {
     "/api/products": {
-      "target": "http://localhost:3007",
+      "target": "http://localhost:3001",
       "secure": false,
       "logLevel": "debug",
       "changeOrigin": true,
@@ -9,7 +9,7 @@
       }
     },
     "/api/users/*": {
-        "target": "http://localhost:3008",
+        "target": "http://localhost:3002",
         "secure": false,
         "logLevel": "debug",
         "changeOrigin": true,
