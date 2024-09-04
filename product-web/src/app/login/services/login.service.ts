@@ -31,6 +31,7 @@ import { environment } from "src/environments/environment";
         return this.http.get<IAuth[]>(this.url).pipe(
             map((response) => {
                 let user = response.filter(item=> item.userName === userNm && item.password === password);
+                console.log(user);
                 if (user && user.length > 0)
                 {
                     if (user[0].isActive){
