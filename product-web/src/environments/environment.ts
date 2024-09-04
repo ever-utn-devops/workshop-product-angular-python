@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  URL_USERS:"",
-  URL_PRODUCTS:""
+  URL_USERS:"http://localhost:3008/users",
+  URL_PRODUCTS:"http://localhost:5003/product"
 };
 
 /*
