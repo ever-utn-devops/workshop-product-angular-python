@@ -1,16 +1,14 @@
 from flask_restful import Resource
 from controllers.health.controller import HealthController
-from controllers.issueId.controller import IssueByIdController
-from controllers.lab.controller import LabController
+from controllers.product.productController import ProductController
+from controllers.product.productByCodeController import ProductByCodeController
 from flask_restful import Api
 
 
 def addServiceLayer(api: Api):
     # Health
     api.add_resource(HealthController, HealthController.route)
-    # Lab
-    api.add_resource(LabController, LabController.route)
 
-    # Issue
-    api.add_resource(IssueByIdController, IssueByIdController.route)
-
+    #Product
+    api.add_resource(ProductController, ProductController.route)
+    api.add_resource(ProductByCodeController, ProductByCodeController.route)

@@ -38,9 +38,9 @@ class Connection:
             raise Exception(e)
         return result
     
-    def get_by_query(self, query):
+    def get_by_query_one(self, query):
         try:
-            result = self.collection.find(query)
+            result = self.collection.find_one(query)
             return result
         except Exception as e:
             logging.error(f"Database error in get_by_query: {e}")
